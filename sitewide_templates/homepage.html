@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<body bgcolor="black"> 
+    <center>
+    <img src="{% static 'img/title_transparent.png' %}">
+    <h2 style="color:white"> Coming soon! </h2>
+    </center>
+
+
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hi, {{user.first_name}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/accounts/logout_user">LOGOUT</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/accounts/register">SIGN UP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/accounts/login_user">LOGIN</a>
+        </li>
+        {% endif %}
+
+
+</body>
+</html>
