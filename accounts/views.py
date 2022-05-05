@@ -2,6 +2,10 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 
+from accounts.models import PlayerData
+
+def home(request): 
+    return render(request, 'homepage.html')
 
 
 def register(request):
@@ -21,10 +25,18 @@ def register(request):
                 messages.info(request, 'Email is already taken')
                 return redirect(register)
             else:
-                user = User.objects.create_user(username=username, password=password, 
-                                        email=email, first_name=first_name, last_name=last_name)
-                user.save()
+                user = User.objects.create_user(
+                    username=username, 
+                    password=password, 
+                    email=email, first_name=first_name, 
+                    last_name=last_name
+                )
+                if (user.playerdata.initialize() == 1):
+                    print (f"New user: {username} initialized.")
+                else:
+                    print (f"Failed to initialize {username}")
                 
+                user.save()
                 return redirect('login_user')
 
 
@@ -45,7 +57,7 @@ def login_user(request):
         password = request.POST['password']
 
         user = auth.authenticate(username=username, password=password)
-
+        
         if user is not None:
             auth.login(request, user)
             return redirect('home')

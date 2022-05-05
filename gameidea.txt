@@ -1,0 +1,58 @@
+mode 1:
+choose area. areas have difficulty modifier that effects stats of enemies.
+every 10 fights, boss fight and enemies get exponentially more difficult.
+1 person turn based rpg battle system. fight, skills, defend, item
+deaths are perma-death.
+
+mode 2:
+city building
+have 8 slots, but can only use 4 without in app purchases
+1 slot (not counted against the 8) is the "inn", which is where new heroes are summoned
+buildings do following:
+
+1. inn:
+summon new heroes using either in app purchase money or renown (which is gained by doing quests)
+read game announcements
+mailbox (receive free items once and a while or letters from admins)
+
+2. blacksmith
+upgrade heroes attack power using gold
+upgrade this building using IAP money to reduce gold cost
+
+3. armorsmith
+upgrade heroes defense power using gold
+upgrade this building using IAP money to reduce gold cost
+
+4. mine
+receive free gold every hour
+upgrade this building using IAP money increase amount of gold gained
+
+5. necropolis
+prevent hero from dying one time if not on cooldown (48hr/24hr/12hr/6hr/3hr/1hr)
+upgrade this building using IAP to decrease cooldown
+
+6. barracks
+store heroes for later use (4 heroes, 8 heroes, 16 heroes, 24 heroes, 48 heroes)
+upgrade this building using IAP to increase storage
+
+7. sacraficial pit
+hire cultists to join you in battle (1 cultist, 2 cultists, 3 cultists)
+upgrade this building using IAP to increase amount of cultists
+
+8. castle
+hire knights to join you in battle (1 knight, 2 knights, 3 knights)
+upgrade this building using IAP to increase amount of cultists
+
+
+
+----
+areas
+
+1. Goblin Forest, Goblin King (10 levels)
+2. Cavern of Woe, Void Ooze (20 Levels)
+3. Janei Sea, Kraken (50 Levels)
+4. Ruined City of Engale (50 Levels)
+5. Mount Negal (50 Levels)
+6. Eye of the Blizzard (50 Levels)
+7. Crystaline End (80 Levels)
+8. Army of the Dreadlord (100 Levels)
