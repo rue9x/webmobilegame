@@ -78,7 +78,6 @@ TEMPLATES = [
 ]
 WSGI_APPLICATION = 'webmobilegame.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -124,12 +123,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')] 
+STATICFILES_DIRS = [
+     os.path.join(BASE_DIR, 'static'),
+     str(Path(os.path.join(BASE_DIR,'static/img/'))),
+     str(Path(os.path.join(BASE_DIR,'static/css/'))), 
+     str(Path(os.path.join(BASE_DIR,'static/js/')))
+]
+for i in range(0,len(STATICFILES_DIRS)):
+    STATICFILES_DIRS[i] = STATICFILES_DIRS[i] + "/"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
+print (TEMPLATES[0]["DIRS"])
+print (STATICFILES_DIRS)

@@ -37,7 +37,8 @@ def register(request):
                     print (f"Failed to initialize {username}")
                 
                 user.save()
-                return redirect('login_user')
+                auth.login(request, user)
+                return redirect('home')
 
 
         else:
