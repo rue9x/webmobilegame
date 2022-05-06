@@ -16,6 +16,14 @@ html, body {
   margin: 0px;
 }
 
+.plotsDiv {
+
+  display: inline-grid;
+  column-gap: 5px;
+  row-gap: 5px;
+  grid-template-columns: auto auto auto auto;
+  text-align: center;
+}
 .emptyPlot {
 background-image: url("../img/grasstile.png");
   width:250px;
@@ -23,7 +31,10 @@ background-image: url("../img/grasstile.png");
   color: white;
   border: 2px solid black;
   background-size: cover;
-  display: inline-block;
 
 }
 
+.emptyPlot img {
+  width: auto;
+  height: auto;
+}

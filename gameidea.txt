@@ -56,3 +56,10 @@ areas
 6. Eye of the Blizzard (50 Levels)
 7. Crystaline End (80 Levels)
 8. Army of the Dreadlord (100 Levels)
+
+
+
+
+
+              playerdata = PlayerData.objects.create_user_profile(
+                    
