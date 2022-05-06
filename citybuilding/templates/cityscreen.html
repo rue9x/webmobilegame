@@ -2,40 +2,42 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/city.css' %}" />
 <input type="text" id="djangoData" style="display: none" value= "{{ data }}"></input>
-<script src="{% static 'js/citybuilding.js' %}"></script>
+<input type="text" id="staticData" style="display: none" value= "{% get_static_prefix %}img/"></input>
+
+<script src="{% static 'js/citybuilding.js' %}"> </script>
 <body class="tiledBackground" onload="city_onload();">
         <div id="align-container" align="center">  
         <div id="plotsDiv" class="plotsDiv">
             <div class ="emptyPlot" id="plot0">
-            <img src="{% static 'img/townhall.png' %}"> 
+                <img id="i0" src="{% static 'img/townhall.png' %}"> 
             </div>
 
             <div class ="emptyPlot" id="plot1"> 
-                <img src="{% static 'img/not_loaded.png' %}"> 
+                <img id="i1" src="{% static 'img/not_loaded.png' %}"> 
             </div>
 
             <div class ="emptyPlot" id="plot2"> 
-                <img src="{% static 'img/not_loaded.png' %}">
+                <img id="i2" src="{% static 'img/not_loaded.png' %}">
             </div>
 
             <div class ="emptyPlot" id="plot3"> 
-                <img src="{% static 'img/not_loaded.png' %}">
+                <img id="i3" src="{% static 'img/not_loaded.png' %}">
             </div>
             
             <div class ="emptyPlot" id="plot4">
-                <img src="{% static 'img/lock.png' %}">
+                <img id="i4" src="{% static 'img/lock.png' %}">
             </div>
 
             <div class ="emptyPlot" id="plot5"> 
-                <img src="{% static 'img/lock.png' %}">
+                <img id="i5" src="{% static 'img/lock.png' %}">
             </div>
 
             <div class ="emptyPlot" id="plot6"> 
-                <img src="{% static 'img/lock.png' %}">
+                <img id="i6" src="{% static 'img/lock.png' %}">
             </div>
 
             <div class ="emptyPlot" id="plot7"> 
-                <img src="{% static 'img/lock.png' %}">
+                <img id="i7" src="{% static 'img/lock.png' %}">
             </div>
         </div>
     </div>
